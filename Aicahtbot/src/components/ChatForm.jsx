@@ -11,7 +11,8 @@ setchatHistory((history)=>[...history,{role:"user",text:usermessage}]);
 
 
 setTimeout(()=>setchatHistory((history)=>[...history,{role:"model",text:"Thinking..."}]),600);
-generateBotResponse([...chatHistory,{role:"user",text:usermessage}]);
+generateBotResponse([...chatHistory,{role:"user",text:`Using the details provided above, please
+    address this query: ${usermessage}`}]);
 console.log(usermessage)
     }
   return (

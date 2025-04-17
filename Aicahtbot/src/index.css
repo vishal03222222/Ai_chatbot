@@ -8,16 +8,36 @@
 }
 body {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     min-height: 100vh;
     background: linear-gradient(#F4F0FF, #DACDFF);
   }
-  
+  #chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #6D4FC2;
+    align-items: center;
+    justify-content: center;
+  }
+  #chatbot-toogler span{
+    position:absolute;
+    color:#fff;
+  }
   .chatbot-popup {
     position:relative;
     width: 420px;
+    opacity:0;
+    pointer-events:none;
+    bottom:90px;
+    right:35px;
+    width:420px;
     overflow: hidden;
     background: #fff;
     border-radius: 15px;
@@ -83,6 +103,7 @@ body {
     scrollbar-color:#DDD3F9 transparent
 
   }
+ 
   .chat-body .message{
     display:flex;
     gap:11px;
